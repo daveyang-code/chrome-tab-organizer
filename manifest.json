@@ -1,0 +1,11 @@
+{
+    "name": "Tab Organizer",
+    "description": "Sort and group tabs",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions" : ["tabs","tabGroups","scripting"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "host_permissions": ["*://www.youtube.com/watch?v=*"]
+}
