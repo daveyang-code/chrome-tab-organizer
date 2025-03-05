@@ -102,7 +102,11 @@ async function getYouTubeLength(tabId) {
         func: () => document.querySelector("video")?.duration || 0,
       },
       (results) => {
-        resolve({ tabId, vidLength: results[0].result });
+        const vidLength =
+          results && results.length > 0 && results[0].result
+            ? results[0].result
+            : 0;
+        resolve({ tabId, vidLength });
       }
     );
   });
